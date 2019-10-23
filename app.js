@@ -13,10 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 app.use(cors())
 
-app.get('/', (req, res) => {
+app.get('/', (res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET');
-    res.download('./resume.pdf')
+    res.download('./001_Lance_Huddleston_II_Resume.pdf')
 })
 
 app.post('/email', (req, res) => {
