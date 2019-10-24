@@ -14,8 +14,6 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET');
     res.download('./001_Lance_Huddleston_II_Resume.pdf')
 })
 
