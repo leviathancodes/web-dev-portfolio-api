@@ -12,6 +12,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
 app.use(cors())
+app.use(express.static(__dirname + '/public'));
+
 
 app.get('/', (req, res) => {
     res.download('./001_Lance_Huddleston_II_Resume.pdf')
